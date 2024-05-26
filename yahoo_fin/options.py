@@ -101,14 +101,10 @@ def get_expiration_dates(ticker):
     session = HTMLSession()
     resp = session.get(site)
     
-    html = resp.html.raw_html.decode()
-    
-    splits = html.split("</option>")
-    
-    dates = [elt[elt.rfind(">"):].strip(">") for elt in splits]
-    
-    dates = [elt for elt in dates if elt != '']
-    
+    query = "//button[@aria-haspopup='listbox' and @data-type='date']/../div[@role='listbox']/div[@role='option']"
+    nodes = resp.html.xpath(query)
+    dates = [node.text for node in nodes]
+
     session.close()
     
     return dates
