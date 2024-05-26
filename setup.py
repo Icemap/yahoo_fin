@@ -12,6 +12,6 @@ setup(name='yahoo_fin',
       author_email='opensourcecoder11@gmail.com',
       license='MIT',
       packages=['yahoo_fin'],
-      install_requires = ["requests_html", "feedparser", "requests", "pandas"],
+      install_requires = ["requests_html", "feedparser", "requests", "pandas", "lxml_html_clean"],
       keywords = ["yahoo finance", "stocks", "options", "fundamentals"],
 zip_safe=False)
