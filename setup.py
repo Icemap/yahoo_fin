@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='yahoo_fin_cheese',
-      version='0.8.9.5',
+      version='0.8.9.6',
       description="""Forked from yahoo_fin to update some outdated functions.
                      Download historical stock prices (daily / weekly / monthly),
                      realtime-prices, fundamentals data, income statements, 
