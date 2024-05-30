@@ -1,3 +1,4 @@
+import numpy as np
 import unittest
 
 import stock_info as s
@@ -45,6 +46,10 @@ class StockInfoOptions(unittest.TestCase):
         df = s.get_company_officers('IBM')
         self.assertFalse(df.empty, "Company officers statement should not be empty")
         self.assertIn('age', df.columns, "Company officers statement should have 'age' column")
+
+    def test_get_live_price(self):
+        price = s.get_live_price('IBM')
+        self.assertTrue(np.dtype('float64') == price.dtype, "Price should not be a float64 number")
 
     def __test_not_empty_and_has_index(self, df, check_indexes):
         self.assertFalse(df.empty, "Dataframe should not be empty")

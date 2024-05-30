@@ -615,7 +615,7 @@ def get_live_price(ticker):
 
     df = get_data(ticker, end_date=pd.Timestamp.today() + pd.DateOffset(10))
 
-    return df.close[-1]
+    return df.close.iloc[-1]
 
 
 def get_live_prices(ticker_list):
