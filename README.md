@@ -1,4 +1,13 @@
-# yahoo_fin
+# yahoo_fin_cheese
+
+> *Note:*
+>
+> Forked from [yahoo_fin](https://github.com/atreadw1492/yahoo_fin) to:
+>
+> - Update some outdated functions.
+> - Add some unit tests.
+> - Remove egg package way.
+
 Scrape stock price history from new (Spring 2017) Yahoo Finance layout
 
 Full documentation is available on my website, here: http://theautomatic.net/yahoo_fin-documentation/.
@@ -11,7 +20,7 @@ The package contains two modules: stock_info and options.
 Download using pip:
 
 ```batch
-pip install yahoo_fin
+pip install yahoo_fin_cheese
 ```
 
 Examples:
